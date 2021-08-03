@@ -6,7 +6,7 @@ from deap import algorithms, base, creator, tools
 def random_character_code():
 	'''ランダムな文字列のUnicode値を返す'''
 	# 半角記号、英数字、ひらがな、カタカナ、だいたいの漢字
-	char_code = list(range(32, 126)) + list(range(12353, 12541)) + kanji_unicode_list
+	char_code = list(range(32, 126)) + list(range(12289, 12541)) + kanji_unicode_list
 	return random.choice(char_code)
 
 def obj_func(x, target_code):
