@@ -21,7 +21,7 @@ kanji_unicode_list = [ord(s) for s in kanji_list]
 
 ### 表示用
 st.title("ノーヒントで答えを探します")
-target_string = st.text_input("答えを教えてね")
+target_string = st.text_input("答えを教えてね（2文字以上）")
 start_btn = st.button("探索スタート")
 st.write("---")
 
@@ -35,7 +35,7 @@ result = 0  # 正解したかどうか
 NGEN = 100  # 世代数
 POP = 10000  # 1世代内の個体数
 
-if target_string:
+if start_btn and len(target_string) >= 2:
 	with st.spinner("探索中・・・"):
 
 		# 答えを文字コードに変換
