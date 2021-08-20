@@ -20,7 +20,7 @@ kanji_list = np.loadtxt("src/kanji_list.txt", dtype=object, delimiter=" ")
 kanji_unicode_list = [ord(s) for s in kanji_list]
 
 ### 表示用
-st.title("ノーヒントで答えを探します")
+st.title("遺伝的アルゴリズムで答えを探します")
 target_string = st.text_input("答えを教えてね（2文字以上）")
 start_btn = st.button("探索スタート")
 st.write("---")
