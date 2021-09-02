@@ -48,7 +48,7 @@ if start_btn and len(target_string) >= 2:
 
 		# 各種設定
 		toolbox = base.Toolbox()
-		toolbox.register("g", random_character_code)  # 遺伝子g: 0-1整数
+		toolbox.register("g", random_character_code)  # 遺伝子g: Unicode値
 		toolbox.register("x", tools.initRepeat, creator.Individual, toolbox.g, n=size)  # 各個体x: gをsize回くり返したlist
 		toolbox.register("population", tools.initRepeat, list, toolbox.x)  # 集団
 		toolbox.register("select", tools.selTournament, tournsize=5)  # 選択方式: トーナメント方式
